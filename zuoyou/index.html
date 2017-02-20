@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <title>左右家居体验馆招商盛典</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section { text-align: center; font: 50px "Microsoft Yahei"; color: #000000;}
+
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/form1.js"></script>
+    <script type="text/javascript">
+
+        $(window).load(function() {
+            $('.moji1').fadeIn(2000);
+            setTimeout("$('.wenzi1').fadeIn(2000);", 1000 );
+            $('#dowebok').fullpage({
+                sectionsColor: ['#725945', '#725945', '#725945', '#725945','#725945', '#725945', '#444444', '#444444','#725945', '#725945', '#725945', '#444444'],
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6','page7', 'page8', 'page9', 'page10', 'page11', 'page12'],
+
+                afterLoad: function(anchorLink, index){
+                    if(index == 1){
+
+
+                        $('.moji1').fadeIn(2500);
+                        setTimeout("$('.wenzi1').fadeIn(2000);", 1250 );
+                    }
+                    if(index == 2){
+
+                        $('.sf2').fadeIn(3000);
+                       // $('.wenzi2').style.transform = "rotateY(0deg)";
+                        $('.wenzi2').animate({ top:'5%',opacity:'1.0'},2000);
+
+
+                    }
+                    if(index == 3){
+                        $('.sf3').fadeIn(3000);
+                        $('.wenzi3').animate({ top:'5%',opacity:'1.0'},2000);
+
+                    }
+                    if(index == 4){
+                       $('.sf4').fadeIn(3000);
+                       $('.wenzi4').animate({ bottom:'8%',opacity:'1.0'},2000);
+
+                    }
+                    if(index == 5){
+                        $('.sf5').fadeIn(3000);
+                        $('.wenzi5').animate({ top:'5%',opacity:'1.0'},2000);
+                    }
+                    if(index == 6){
+                        $('.sf6').fadeIn(3000);
+                        $('.wenzi6').animate({ top:'7%',opacity:'1.0'},2000);
+                    }
+                    if(index == 7){
+                        $('.moji7').fadeIn(500,function(){
+
+                            $('.a7').animate({ height:'18%',opacity:'0.8'},200);
+                            $('.a7').animate({ height:'15%',opacity:'1.0'},500);
+                            $('.c7').animate({ height:'18%',opacity:'0.8'},200);
+                            $('.c7').animate({ height:'15%',opacity:'1.0'},500);
+                        });
+
+                        setTimeout(" $('.e7').animate({ height:'18%',opacity:'0.8'},200);$('.e7').animate({ height:'15%',opacity:'1.0'},500);", 750 );
+
+
+                        setTimeout("$('.f7').animate({ height:'18%',opacity:'0.8'},200);$('.f7').animate({ height:'15%',opacity:'1.0'},500);", 1250 );
+
+
+                        $('.wenzi7').fadeIn(1000,function(){
+                            $('.b7').animate({ height:'18%',opacity:'0.8'},200);
+                            $('.b7').animate({ height:'15%',opacity:'1.0'},500);
+
+                            $('.d7').animate({ height:'18%',opacity:'0.8'},200);
+                            $('.d7').animate({ height:'15%',opacity:'1.0'},500);
+                        });
+
+                    }
+                    if(index == 8){
+                        $('.logo8').animate({ top:'44%',opacity:'1.0'},1500);
+                        $('.wenzi8').animate({ top:'5%',opacity:'1.0'},2000);
+                    }
+
+                    if(index == 9){
+                        $('.sf9').fadeIn(1000);
+                        $('.wenzi9').animate({ top:'5%',opacity:'1.0'},2000);
+                    }
+                    if(index == 10){
+                        $('.sf10').fadeIn(1000);
+                        $('.wenzi10').animate({ top:'5%',opacity:'1.0'},2000);
+                    }
+                    if(index == 11){
+                        $('.sf11').fadeIn(1000);
+                        $('.wenzi11').animate({ top:'5%',opacity:'1.0'},2000);
+                    }
+                    if(index == 12){
+                        $('.wenzi12a').fadeIn(2000);
+                        $('.form').fadeIn(2000);
+						$('#time').fadeIn(2000);
+                        $('#address').fadeIn(2000);
+                        $('.wenzi12').animate({ top:'5%',opacity:'1.0'},1000);
+                    }
+                },
+                onLeave: function(index, direction){
+                    if(index == 1){
+
+
+                        $('.moji1').fadeOut(2000);
+                        $('.wenzi1').fadeOut(2000);
+                    }
+                    if(index == 2){
+
+                        $('.sf2').fadeOut(2000);
+                        // $('.wenzi2').style.transform = "rotateY(0deg)";
+                        $('.wenzi2').animate({ top:'0%',opacity:'0'},2000);
+
+
+                    }
+                    if(index == 3){
+                        $('.sf3').fadeOut(2000);
+                        $('.wenzi3').animate({ top:'0%',opacity:'0'},2000);
+
+                    }
+                    if(index == 4){
+                        $('.sf4').fadeOut(3000);
+                        $('.wenzi4').animate({ bottom:'13%',opacity:'0'},2000);
+
+                    }
+                    if(index == 5){
+                        $('.sf5').fadeOut(3000);
+                        $('.wenzi5').animate({ top:'10%',opacity:'0'},2000);
+                    }
+                    if(index == 6){
+                        $('.sf6').fadeOut(3000);
+                        $('.wenzi6').animate({ top:'12%',opacity:'0'},2000);
+                    }
+                    if(index == 7){
+                        $('.moji7').fadeOut(500,function(){
+
+                            $('.a7').animate({ opacity:'0'},200);
+
+                            $('.c7').animate({opacity:'0'},500);
+                        });
+
+                        $('.e7').animate({ opacity:'0'},200);
+                        $('.f7').animate({ opacity:'0'},200);
+
+
+
+
+                        $('.wenzi7').fadeOut(1000,function(){
+                            $('.b7').animate({ opacity:'0'},200);
+
+
+                            $('.d7').animate({ opacity:'0'},200);
+
+                        });
+
+                    }
+                    if(index == 8){
+                        $('.logo8').animate({ top:'39%',opacity:'0'},1500);
+                        $('.wenzi8').animate({ top:'0%',opacity:'0'},2000);
+                    }
+
+                    if(index == 9){
+                        $('.sf9').fadeOut(1000);
+                        $('.wenzi9').animate({ top:'0%',opacity:'0'},2000);
+                    }
+                    if(index == 10){
+                        $('.sf10').fadeOut(1000);
+                        $('.wenzi10').animate({ top:'0%',opacity:'0'},2000);
+                    }
+                    if(index == 11){
+                        $('.sf11').fadeOut(1000);
+                        $('.wenzi11').animate({ top:'0%',opacity:'0'},2000);
+                    }
+                    if(index == 12){
+                        $('.wenzi12a').fadeOut(2000);
+                        $('.form').fadeOut(2000);
+						  $('#time').fadeOut(2000);
+                        $('#address').fadeOut(2000);
+                        $('.wenzi12').animate({ top:'0%',opacity:'0'},1000);
+                    }
+                }
+            });
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+<audio autoplay="autoplay"  loop="loop">
+    <source src="back.mp3" type="audio/mpeg" />
+</audio>
+<div id="dowebok">
+<div  class="section">
+
+    <img src="images/1/bg.jpg" class="back"/>
+<!--
+    <img src="img/2.png" style="position:absolute;top:10%;left:0;z-index: 0;width: 30px;height: 30px"/>
+-->
+    <div class="moji1" style="display: none;"><img  src="images/1/moji.png" style="position: absolute;top:0;right:0;z-index: 0;width: 65%;"/></div>
+    <img class="wenzi1" src="images/1/wenzi.png" style="position: absolute;top:30px;right:40px;height: 60%;z-index: 1;display: none"/>
+
+
+</div>
+
+<div class="section" >
+    <img src="images/2/bg2.jpg" class="back"/>
+    <div><img class="sf2" src="images/2/sf2.png" style="position: absolute;bottom:0%;right:2.5%;z-index: 0;width: 95%;display: none;"/></div>
+    <img id="wenzi2" class="wenzi2" src="images/2/wenzi2.png" style="position: absolute;top:-5%;left:27%;height: 40%;z-index: 1;opacity: 0;"/>
+
+</div>
+<div class="section " >
+    <img src="images/3/bg3.jpg" class="back"/>
+    <img class="sf3" src="images/3/sf3.png" style="position: absolute;bottom:0%;right:2.5%;z-index: 0;width: 95%;display: none"/>
+    <img class="wenzi3" src="images/3/wenzi3.png" style="position: absolute;top:0%;right:22%;height: 40%;z-index: 1;opacity: 0"/>
+
+</div>
+<div class="section ">
+    <img src="images/4/bg4.jpg" class="back"/>
+    <img class="sf4" src="images/4/sf4.png" style="position: absolute;top:15%;right:2.5%;z-index: 0;width: 95%;display: none;"/>
+    <img class="wenzi4" src="images/4/wenzi4.png" style="position: absolute;bottom:13%;right:18%;height: 39%;z-index: 1;opacity: 0;"/>
+
+</div>
+<div class="section " >
+    <img src="images/5/bg5.jpg" class="back"/>
+    <img class="sf5" src="images/5/sf5.png" style="position: absolute;bottom:3%;right:2.5%;z-index: 0;width: 70%;display: none;"/>
+    <img class="wenzi5" src="images/5/wenzi5.png" style="position: absolute;top:0%;right:15%;height: 40%;z-index: 1;opacity: 0;"/>
+
+</div>
+<div class="section ">
+    <img src="images/6/bg6.jpg" class="back"/>
+    <img class="sf6" src="images/6/sf6.png" style="position: absolute;bottom:10%;right:2%;z-index: 0;width: 90%;display: none;"/>
+    <img class="wenzi6" src="images/6/wenzi6.png" style="position: absolute;top:2%;left:18%;height: 42%;z-index: 1;opacity: 0;"/>
+
+</div>
+<div class="section " >
+    <img src="images/7/bg7.jpg" class="back"/>
+    <img class="moji7" src="images/7/moji7.png" style="position: absolute;top:0%;right:2.5%;z-index: 0;height: 65%;display: none;"/>
+    <img class="a7" src="images/7/7a.png" style="position: absolute;top:7%;left:35%;z-index: 0;height: 15%;opacity: 0"/>
+    <img class="wenzi7" src="images/7/wenzi7.png" style="position: absolute;top:6%;right:15%;z-index: 0;height: 30%;display: none;"/>
+    <img class="b7" src="images/7/7b.png" style="position: absolute;top:30%;left:10%;z-index: 0;height: 15%;opacity: 0"/>
+    <img class="c7" src="images/7/7c.png" style="position: absolute;top:44%;left:41%;z-index: 0;height: 15%;opacity: 0;"/>
+    <img class="d7" src="images/7/7d.png" style="position: absolute;top:58%;right:4%;z-index: 0;height: 15%;opacity: 0"/>
+    <img class="e7" src="images/7/7e.png" style="position: absolute;top:63%;left:8%;z-index: 0;height: 15%;opacity: 0"/>
+    <img class="f7" src="images/7/7f.png" style="position: absolute;top:83%;left:45%;z-index: 0;height: 15%;opacity: 0"/>
+
+
+</div>
+<div class="section " >
+    <img src="images/8/bg8.jpg" class="back"/>
+    <img class="logo8" src="images/8/logo8.png" style="position: absolute;top:48%;right:30%;z-index: 0;width: 40%;opacity: 0;"/>
+    <img class="wenzi8" src="images/8/wenzi8.png" style="position: absolute;top:9%;left:47%;height: 32%;z-index: 1;opacity: 0;"/>
+</div>
+<div class="section ">
+    <img src="images/9/bg9.jpg" class="back"/>
+    <img class="sf9" src="images/9/sf9.png" style="position: absolute;bottom:0%;z-index: 0;width: 100%;left: 0;display: none;"/>
+    <img class="wenzi9" src="images/9/wenzi9.png" style="position: absolute;top:2%;right:22%;height: 40%;z-index: 1;opacity: 0"/>
+
+</div>
+<div class="section ">
+    <img src="images/10/bg10.jpg" class="back"/>
+    <img class="sf10" src="images/10/sf10.png" style="position: absolute;bottom:0%;z-index: 0;width: 92%;left: 8%;display: none"/>
+    <img class="wenzi10" src="images/10/wenzi10.png" style="position: absolute;top:2%;left:22%;height: 40%;z-index: 1;opacity: 0"/>
+
+</div>
+<div class="section ">
+    <img src="images/11/bg11.jpg" class="back"/>
+    <img class="sf11" src="images/11/sf11.png" style="position: absolute;bottom:0%;z-index: 0;width: 100%;left: 0;display: none"/>
+    <img class="wenzi11" src="images/11/wenzi11.png" style="position: absolute;top:2%;right:22%;height: 40%;z-index: 1;opacity: 0"/>
+
+</div>
+<div class="section " >
+    <img src="images/12/bg12.png" class="back"/>
+    <img class="wenzi12" src="images/12/wenzi12.png" style="position: absolute;top:8%;right:10%;height: 40%;z-index: 1;opacity: 0"/>
+    <img class="wenzi12a" src="images/12/wenzi12a.png" style="position: absolute;top:50%;left:20%;height: 30%;z-index: 1;display: none"/>
+    <div class="form" style="display: none">
+    <input type="text" value="" id="name" style="position: absolute;top:49%;left:40%;width:43%;height: 4%;z-index: 1;">
+    <input type="text" value="" id="phone" style="position: absolute;top:56%;left:40%;width:43%;height: 4%;z-index: 1;">
+       <div id="where">
+           <select name='hw_1' onChange = 'hw_select()' value="" id="province" style="position: absolute;top:63%;left:40%;width:43%;height: 4%;z-index: 1;"></select>
+           <select name='hw_2' onChange = 'hw_select()' value="" id="city" style="position: absolute;top:70%;left:40%;width:43%;height: 4%;z-index: 1;"></select>
+          <!-- <input type="text" value="" id="province" style="position: absolute;top:70%;left:40%;width:43%;height: 4%;z-index: 1;">
+    <input type="text" value="" id="city" style="position: absolute;top:77%;left:40%;width:43%;height: 4%;z-index: 1;">
+       -->
+       </div>
+    <input type="text" value="" id="note" style="position: absolute;top:77%;left:40%;width:43%;height: 4%;z-index: 1;">
+    <input type="submit" value=""  style="position: absolute;top:84%;left:43%;width:28%;height: 4%;z-index: 1;background-color: red;border: 0;">
+    <img src="images/12/wenzi12b.png" onclick="sumbit()" style="position: absolute;top:84.5%;left:50%;height: 4%;z-index: 1;" />
+   </div>
+	<div id="time" style="position: absolute;top:86.5%;left:3%;height: 2.5%;z-index: 2;color: #ffffff;font-size: 0.25em;display: none"><p>招商时间：2015年6月27日</p></div>
+    <div id="address" style="position: absolute;top:90%;left:3%;height: 2.5%;z-index: 2;color: #ffffff;font-size: 0.25em;display: none"><p>招商地点：郑州市中原区中原西路西四环金马凯旋集团</p></div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<script language="JavaScript">
+    var hw_selecttext ="北京|东城^西城^崇文^宣武^朝阳^丰台^石景山^海淀^门头沟^房山^通州^顺义^昌平^大兴^平谷^怀柔^密云^延庆*上海|黄浦^卢湾^徐汇^长宁^静安^普陀^闸北^虹口^杨浦^闵行^宝山^嘉定^浦东^金山^松江^青浦^南汇^奉贤^崇明*天津|和平^东丽^河东^西青^河西^津南^南开^北辰^河北^武清^红挢^塘沽^汉沽^大港^宁河^静海^宝坻^蓟县*重庆|万州^涪陵^渝中^大渡口^江北^沙坪坝^九龙坡^南岸^北碚^万盛^双挢^渝北^巴南^黔江^长寿^綦江^潼南^铜梁^大足^荣昌^壁山^梁平^城口^丰都^垫江^武隆^忠县^开县^云阳^奉节^巫山^巫溪^石柱^秀山^酉阳^彭水^江津^合川^永川^南川*河北|石家庄^邯郸^邢台^保定^张家口^承德^廊坊^唐山^秦皇岛^沧州^衡水*山西|太原^大同^阳泉^长治^晋城^朔州^吕梁^忻州^晋中^临汾^运城*内蒙古|呼和浩特^包头^乌海^赤峰^呼伦贝尔盟^阿拉善盟^哲里木盟^兴安盟^乌兰察布盟^锡林郭勒盟^巴彦淖尔盟^伊克昭盟*辽宁|沈阳^大连^鞍山^抚顺^本溪^丹东^锦州^营口^阜新^辽阳^盘锦^铁岭^朝阳^葫芦岛*吉林|长春^吉林^四平^辽源^通化^白山^松原^白城^延边*黑龙江|哈尔滨^齐齐哈尔^牡丹江^佳木斯^大庆^绥化^鹤岗^鸡西^黑河^双鸭山^伊春^七台河^大兴安岭*江苏|南京^镇江^苏州^南通^扬州^盐城^徐州^连云港^常州^无锡^宿迁^泰州^淮安*浙江|杭州^宁波^温州^嘉兴^湖州^绍兴^金华^衢州^舟山^台州^丽水*安徽|合肥^芜湖^蚌埠^马鞍山^淮北^铜陵^安庆^黄山^滁州^宿州^池州^淮南^巢湖^阜阳^六安^宣城^亳州*福建|福州^厦门^莆田^三明^泉州^漳州^南平^龙岩^宁德*江西|南昌市^景德镇^九江^鹰潭^萍乡^新馀^赣州^吉安^宜春^抚州^上饶*山东|济南^青岛^淄博^枣庄^东营^烟台^潍坊^济宁^泰安^威海^日照^莱芜^临沂^德州^聊城^滨州^菏泽*河南|郑州^开封^洛阳^平顶山^安阳^鹤壁^新乡^焦作^濮阳^许昌^漯河^三门峡^南阳^商丘^信阳^周口^驻马店^济源*湖北|武汉^宜昌^荆州^襄樊^黄石^荆门^黄冈^十堰^恩施^潜江^天门^仙桃^随州^咸宁^孝感^鄂州*湖南|长沙^常德^株洲^湘潭^衡阳^岳阳^邵阳^益阳^娄底^怀化^郴州^永州^湘西^张家界*广东|广州^深圳^珠海^汕头^东莞^中山^佛山^韶关^江门^湛江^茂名^肇庆^惠州^梅州^汕尾^河源^阳江^清远^潮州^揭阳^云浮*广西|南宁^柳州^桂林^梧州^北海^防城港^钦州^贵港^玉林^南宁地区^柳州地区^贺州^百色^河池*海南|海口^三亚*四川|成都^绵阳^德阳^自贡^攀枝花^广元^内江^乐山^南充^宜宾^广安^达川^雅安^眉山^甘孜^凉山^泸州*贵州|贵阳^六盘水^遵义^安顺^铜仁^黔西南^毕节^黔东南^黔南*云南|昆明^大理^曲靖^玉溪^昭通^楚雄^红河^文山^思茅^西双版纳^保山^德宏^丽江^怒江^迪庆^临沧*西藏|拉萨^日喀则^山南^林芝^昌都^阿里^那曲*陕西|西安^宝鸡^咸阳^铜川^渭南^延安^榆林^汉中^安康^商洛*甘肃|兰州^嘉峪关^金昌^白银^天水^酒泉^张掖^武威^定西^陇南^平凉^庆阳^临夏^甘南*宁夏|银川^石嘴山^吴忠^固原*青海|西宁^海东^海南^海北^黄南^玉树^果洛^海西*新疆|乌鲁木齐^石河子^克拉玛依^伊犁^巴音郭勒^昌吉^克孜勒苏柯尔克孜^博尔塔拉^吐鲁番^哈密^喀什^和田^阿克苏*香港|*澳门|*台湾|台北^高雄^台中^台南^屏东^南投^云林^新竹^彰化^苗栗^嘉义^花莲^桃园^宜兰^基隆^台东^金门^马祖^澎湖*其它|北美洲^南美洲^亚洲^非洲^欧洲^大洋洲"
+    //如果文本与值不同，请输入在文本后加上@值,如:北京@010|东城@001^西城@002
+    var TheSplit1 = "*"  //北京与上海的分隔符
+    var TheSplit2 = "|"  //北京与东城的分隔符
+    var TheSplit3 = "^"  //东城与西城的分隔符
+    var TheSplit4 = "@"  //文本与值的分隔符，可以省略
+    var hwallselecttext = hw_selecttext
+    var hwdefault_value = "浙江杭州"
+
+    //默认值，在值有相同时有bug。
+
+
+
+
+
+   // document.getElementById("where").innerHTML("<select name='hw_1' onChange = 'hw_select()'></select> <select name='hw_2' onChange = 'hw_select()'></select> ");
+    var hwallselecttextarr;
+    hwallselecttextarr = hwallselecttext.split(TheSplit1);
+    hwArraylength = hwallselecttextarr.length;
+    var hwwhere = new Array(hwArraylength);
+    hwwhere[0]= new hw_comefrom("请选择@","请选择@");
+
+    for (var hwl=0;hwl<hwArraylength;hwl++)
+    {
+        eval(hwwhere[hwl+1] = new hw_comefrom(hwallselecttextarr[hwl].split(TheSplit2)[0],hwallselecttextarr[hwl].split(TheSplit2)[1]))
+    }
+    function hw_comefrom(hwSelect_s1,hwSelect_s2) { this.hwSelect_s1 = hwSelect_s1; this.hwSelect_s2 = hwSelect_s2; }
+
+    function hw_select()
+    {
+        with(document.all.hw_1)
+        {
+            var hwSelect_s12 = options[selectedIndex].value;
+        }
+        for(hwi = 0;hwi < hwwhere.length;hwi ++)
+        {
+            if (hwwhere[hwi].hwSelect_s1.indexOf(TheSplit4)!=-1)
+            {
+                var hwThisV = hwwhere[hwi].hwSelect_s1.split(TheSplit4)[1]
+            }
+            else
+            {
+                var hwThisV = hwwhere[hwi].hwSelect_s1
+            }
+            if (hwThisV == hwSelect_s12)
+            {
+                hwSelect_s13 = (hwwhere[hwi].hwSelect_s2).split(TheSplit3);
+                for(hwj = 0;hwj < hwSelect_s13.length;hwj++)
+                {
+                    with(document.all.hw_2)
+                    {
+                        length = hwSelect_s13.length;
+                        if (hwSelect_s13[hwj].indexOf(TheSplit4)!=-1)
+                        {
+                            options[hwj].text = hwSelect_s13[hwj].split(TheSplit4)[0]
+                            options[hwj].value = hwSelect_s13[hwj].split(TheSplit4)[1]
+                        }
+                        else
+                        {
+                            options[hwj].text = hwSelect_s13[hwj];
+                            options[hwj].value = hwSelect_s13[hwj];
+                        }
+                        var hwSelect_s14=options[selectedIndex].value;
+                    }
+                }
+                break;
+            }
+        }
+        document.all.hw.value=hwSelect_s12+""+hwSelect_s14;
+    }
+    function hw_init()
+    {
+        with(document.all.hw_1)
+        {
+            length = hwwhere.length;
+            var hwm = 0
+            for(hwk=0;hwk<hwwhere.length;hwk++)
+            {
+                if (hwwhere[hwk].hwSelect_s1.indexOf(TheSplit4)!=-1)
+                {
+                    options[hwk].text = hwwhere[hwk].hwSelect_s1.split(TheSplit4)[0];
+                    options[hwk].value = hwwhere[hwk].hwSelect_s1.split(TheSplit4)[1];
+                    if (hwdefault_value.indexOf(hwwhere[hwk].hwSelect_s1.split(TheSplit4)[1])!=-1){hwm = hwk}
+                }
+                else
+                {
+                    options[hwk].text = hwwhere[hwk].hwSelect_s1;
+                    options[hwk].value = hwwhere[hwk].hwSelect_s1;
+                    if (hwdefault_value.indexOf(hwwhere[hwk].hwSelect_s1)!=-1){hwm = hwk}
+                }
+            }
+            selectedIndex = hwm
+        }
+        with(document.all.hw_2)
+        {
+            var hwn = 0
+            hwSelect_s13 = (hwwhere[hwm].hwSelect_s2).split(TheSplit3);
+            length = hwSelect_s13.length;
+            for(hwl=0;hwl<length;hwl++)
+            {
+                if (hwSelect_s13[hwl].indexOf(TheSplit4)!=-1)
+                {
+                    options[hwl].text = hwSelect_s13[hwl].split(TheSplit4)[0];
+                    options[hwl].value = hwSelect_s13[hwl].split(TheSplit4)[1];
+                    if (hwdefault_value.indexOf(hwSelect_s13[hwl].split(TheSplit4)[1])!=-1){hwn = hwl}
+                }
+                else
+                {
+                    options[hwl].text = hwSelect_s13[hwl];
+                    options[hwl].value = hwSelect_s13[hwl];
+                    if (hwdefault_value.indexOf(hwSelect_s13[hwl])!=-1){hwn = hwl}
+                }
+            }
+            selectedIndex = hwn
+        }
+    }
+    hw_init();
+    //-->
+</script>
+
+<script>
+/*	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	var xbtitle="左右家居体验馆招商盛典";
+	var xbdesc ="6月27日，左右家居体验馆邀您品鉴质感家具";
+	var xbimgUrl="http://www.gdiy.me/case/zuoyou/icon.jpg";//游戏logo
+	var xblink="http://www.gdiy.me/case/zuoyou/index.php"; //游戏链接
+	var xbhref=""; //大厅游戏
+	
+	
+  wx.config({
+  	//debug: true,
+    appId: '<?php echo $signPackage["appId"];?>',
+    timestamp: <?php echo $signPackage["timestamp"];?>,
+    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+    signature: '<?php echo $signPackage["signature"];?>',
+    jsApiList: [ 'onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo']
+  });
+  wx.ready(function () {
+    // 在这里调用 API
+    wx.onMenuShareTimeline({
+   	title:xbdesc , // 分享描述
+    link: xblink, // 分享链接
+    imgUrl: xbimgUrl, // 分享图标
+	type: '', // 分享类型,music、video或link，不填默认为link
+    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+    success: function () { 
+       
+    },
+    cancel: function () { 
+      
+    }
+});
+	wx.onMenuShareAppMessage({
+		title: xbtitle, // 分享标题
+		desc:xbdesc , // 分享描述
+		link: xblink, // 分享链接
+		imgUrl: xbimgUrl, // 分享图标
+		type: '', // 分享类型,music、video或link，不填默认为link
+		dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+		success: function () { 
+		   
+		},
+		cancel: function () { 
+			
+		}
+	});
+  });
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255496952'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255496952' type='text/javascript'%3E%3C/script%3E"));</script>
+
+  */
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立方体</title>
+    <script type="text/javascript" src='jquery-1.11.2.min.js'></script>
+    <script src='a.js'></script>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/default1.css">
+
+    <!--[if IE]>
+
+    <![endif]-->
+    <style>
+
+        /* keyframes for rotating animation */
+        @-webkit-keyframes spin {
+            from { transform: rotateY(0deg) rotateX(15deg); }
+
+            to   { transform: rotateY(360deg) rotateX(15deg); }
+
+        }
+
+        /* scene wrapper */
+        .wrapper{
+            height: 300px;
+            margin-top:150px;
+            position:relative;
+            perspective: 800;
+            perspective-origin: 50% 100px;
+        }
+
+        /* cube wrapper */
+        .cube{
+            position: relative;
+            margin: 0 auto;
+            width: 100px;
+            transform-style: preserve-3d;
+
+
+        }
+        .cubemove{
+            position: relative;
+            margin: 0 auto;
+            width: 100px;
+            transform-style: preserve-3d;
+            animation: spin 6s infinite linear;
+            transition: all 1s linear;
+        }
+
+        /* outer cube
+         animation: spin 4s infinite linear;
+          transition: all 1s linear;上面*/
+        b{
+            position:absolute;
+            /* width:200px;    这里*/
+            width:100px;
+            height:100px;
+            display:block;
+            background:rgba(255,255,255,0.1);
+            /*   background:#000000;   */
+            box-shadow:inset 0 0 30px rgba(0,0,0,0.2);
+            font-size:50px;
+            text-align:center;
+            line-height:100px;
+            color:rgba(0,0,0,0.5);
+            font-family:sans-serif;
+            text-transform:uppercase;
+            transition-property:transform;
+            transition-duration:1.5s;
+            transition-timing-function: linear;
+
+
+
+            /*   transition-duration:transform 1s linear;*/
+
+        }
+        b.back{
+            transform: translateZ(-50px) rotateY(180deg);
+        }
+        b.right{
+            transform:rotateY(-270deg) translateX(50px);
+            transform-origin: top right;
+        }
+        b.left{
+            transform:rotateY(270deg) translateX(-50px);
+            transform-origin: center left;
+        }
+        b.top{
+            transform:rotateX(-90deg) translateY(-50px);
+            transform-origin: top center;
+        }
+        b.bottom{
+            transform:rotateX(90deg) translateY(50px);
+            transform-origin: bottom center;
+        }
+        b.front{
+            transform: translateZ(50px);
+        }
+
+
+
+
+        /* hover transformations
+         .cube:hover{
+             top:150px;
+         }
+         .cube:hover b.top{
+             transform: translateZ(100px) rotateX(-180deg);
+             transform-origin: top center;
+         }
+         .cube:hover b.bottom{
+             transform: translateZ(100px) rotateX(180deg);
+             transform-origin: bottom center;
+         }
+         .cube:hover b.left{
+             transform:translateZ(100px) rotateY(180deg) translateY(-200px) ;
+             transform-origin:center left;
+
+         }
+         .cube:hover b.right{
+             transform: translateZ(100px) rotateY(180deg) translateY(-200px);
+             transform-origin:center right;
+         }
+         .cube:hover b.back{
+             transform: translateZ(100px) rotateX(-180deg) translateY(-200px);
+             transform-origin: bottom center;
+         }
+
+
+
+
+
+         .cube:hover i{
+             top:-200px;
+         }*/
+    </style>
+
+    <script type="text/javascript">
+        //   function reback(){$(this).css('background','black');};
+        $(document).ready(function(){
+            var i=2;
+            var fail=0;
+            $("#btn").click(function(){
+                $(this).hide();
+                $("#info").html("<a href='javascript:void(0);' >立方体已展开，按从小到大顺序点开黑块中的数字</a>");
+                $("b").css("background","black");
+               // $("#a1").css("background","black");
+                //    setTimeout({
+                $(".cubemove").css("animationPlayState", "paused");
+                // $("#cube1").addClass("cube");
+                $("#cube1").removeClass("cubemove");
+                setTimeout(function () {
+                    $("#cube1").addClass("cube");
+
+                });
+
+                $("b.front").css("background", "rgba(255,255,255,0.1)");
+                $("b.back").css("background", "rgba(255,255,255,0.1)");
+                $("b.right").css("background", "rgba(255,255,255,0.1)");
+                //  $(".cube").css("top","150px");
+                $("b.top").css("transform", " translateZ(50px) rotateX(-180deg)");
+                $("b.top").css("transform-origin", "top center");
+                $("b.bottom").css("transform", " translateZ(50px) rotateX(180deg)");
+                $("b.bottom").css("transform-origin", "bottom center");
+                $("b.back").css("transform", " translateZ(50px) rotateX(-180deg) translateY(-100px)");
+                $("b.back").css("transform-origin", "bottom center");
+                $("b.left").css("transform", " translateZ(50px) rotateY(180deg)");
+                $("b.left").css("transform-origin", "left center");
+                $("b.right").css("transform", " translateZ(50px) rotateY(180deg)");
+                $("b.right").css("transform-origin", "right center");
+
+                //    },1000);
+            });
+
+            $("b").click(function(){
+                if($(this).text()!=1&&$(this).text()!=4&&$(this).text()!=6) {
+                    var value = $(this).text();
+                    console.log(value);
+                    console.log(i);
+                    // var id1="a"+value;
+                    if (i == value) {
+                        $(this).css("background", "rgba(255,255,255,0.1)");
+                    }
+                    else {
+                        $(this).css("background", "red");
+                        fail++;
+                        //   setTimeout("$(self).css('background','black')",1000);
+                        setTimeout(
+                                function (self) {
+                                    return function () {
+                                        $(self).css("background", "black");//这里面用self代替this
+                                    }
+                                }(this), 1000);
+                   //     i = i - 1;
+                        if($(this).text()==2)
+                        {i=i-1;}
+                        if($(this).text()==3)
+                        {i=i-2;}
+                        if($(this).text()==5)
+                        {i=i-1;}
+                                }
+                    if($(this).text()==2)
+                    { i = i + 1;}
+                    if($(this).text()==3)
+                    { i = i + 2; }
+                    if($(this).text()==5)
+                    {i=i+1;}
+                        if (fail == 2) {
+                            if (confirm("gameover,重新开始？"))
+                                location.href='index.html';
+                    }
+
+                    if (i == 6) {
+                        location.href='index2.html';
+                    }
+
+                }
+            })
+
+        });
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="info" class="htmleaf-demo center"></div>
+        <div id="btn" class="htmleaf-demo center"><a href="javascript:void(0);" >观察立方体数字，好了点我（后面一样哟）</a></div>
+        <div class="wrapper">
+            <div id="cube1" class="cubemove" >
+                <b class="front" id="a1">1</b>
+                <b class="back" id="a6">6</b>
+                <b class="top" id="a2">2</b>
+                <b class="bottom" id="a5">5</b>
+                <b class="left" id="a3">3</b>
+                <b class="right" id="a4">4</b>
+                <i class="front" id=""></i>
+                <i class="back"></i>
+                <i class="top"></i>
+                <i class="bottom"></i>
+                <i class="left"></i>
+                <i class="right"></i>
+
+            </div>
+        </div>
+
+
+</div>
+
+</body>
+</html>

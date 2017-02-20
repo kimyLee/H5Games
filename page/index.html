@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>信步游戏</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>
+        //搜索框图片显示
+        function change(){
+            document.getElementById("search-box").style.backgroundPosition="100% 0px";
+        }
+        function rechange(){
+            document.getElementById("search-box").style.backgroundPosition="0px 0px";
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="wrapper">
+        <div class="headnav">
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">游戏</a></li>
+                    <li><a href="">定制</a></li>
+                    <li><a href="">案例</a></li>
+                    <li><a href="">资讯</a></li>
+                    <li><a href="">关于</a></li>
+                </ul>
+            </div>
+            <div class="login">
+                <div class="loginstyle"><a href="">登陆</a></div>
+                <div class="loginstyle"><a href="">注册</a></div>
+            </div>
+
+        </div>
+
+
+        <div class="body">
+
+            <div class="imgpic" >
+                <!--
+                                <img src="img/pic.png" width="100%" style="display: block;">
+                -->
+            </div>
+
+
+            <div class="content">
+                <div class="left">
+                    <img src="img/H5.png" style="float: right" >
+
+                </div>
+                <div class="right">
+                    <div class="one">
+                        <div class="bubble">我们是谁?</div>
+                        <p class="normal" style="color: black;font-family: '微软雅黑';">一群心中有梦的技术控、体验控、服务控，一群够专业、肯付出、不抱怨、有热情的新青年！</p>
+                    </div>
+                    <div class="one">
+                        <div class="bubble" style="width: 150px">我们做什么?</div>
+                        <p class="normal" style="color: black;font-family: '微软雅黑';">构建连接商家、个人和开发者的移动游戏生态体系。</p>
+                    </div>
+                    <div class="one">
+                        <p class="title" style="color: #e74c3c;font-family: '微软雅黑';">1.信步游戏，国内最好的移动游戏营销平台：</p>
+                        <p class="small" style="color: black;font-family: '微软雅黑';">游戏社会化营销：故事性与可玩性并重，更利于提升形象；用户分享更主动，更利于品牌曝光；用户互动性更强，更利于销售转化。</p>
+                        <p class="small" style="color: black;font-family: '微软雅黑';">游戏快速定制：丰富的游戏模板，强大的定制技术，给力的定制插件，让每个商家都能按照自己的意愿快速定制游戏.</p>
+                        <p class="small" style="color: black;font-family: '微软雅黑';">游戏对接合作：移动APP、微信微博等社交平台均可免费获取个性化的游戏频道。</p>
+                    </div>
+                    <div class="one">
+                        <p class="title" style="color: #e74c3c;font-family: '微软雅黑';">2.信步游戏，程序猿、攻城狮们的圣地：</p>
+                        <p class="small" style="color: black;font-family: '微软雅黑';">为开发者提供丰富的开发工具及基础技术服务，快速便捷的搭建游戏；游戏制作成模板，千万用户定制，生命周期无限延续，可持续盈利不再难</p>
+                    </div>
+                    <div class="one">
+                        <p class="title" style="color: #e74c3c;font-family: '微软雅黑';">3.信步游戏，游戏玩家的乐园：</p>
+                        <p class="small" style="color: black;font-family: '微软雅黑';">休闲、棋牌、搞笑、射击、赛车、策略、益智、女生···精挑细选海量精品游戏，奉献给玩家，想玩啥就有啥~</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+    <div class="foot">
+        <div class="link">
+            <ul>
+                <li><a href=""><img src="img/wx_ .png" onmouseover="changewx(this)" onmouseout="this.src='img/wx_ .png';"></a></li>
+                <li><a href=""><img src="img/qq_.png" onmouseover="changeqq(this)" onmouseout="this.src='img/qq_.png';"></a></li>
+                <li><a href=""><img src="img/mail_.png" onmouseover="changemail(this)" onmouseout="this.src='img/mail_.png';"></a></li>
+                <li><a href=""><img src="img/phone_.png" onmouseover="changephone(this)" onmouseout="this.src='img/phone_.png';"></a></li>
+            </ul>
+        </div>
+        <p style="clear: both">Copyright © 2015 信步游戏 gdiy.me. All rights reserved 粤ICP备14083112号-1 </p>
+    </div>
+</div>
+<script>
+    function changewx(img){
+        img.src="img/wx.png";
+    }
+    function changeqq(img){
+        img.src="img/qq.png";
+    }
+    function changemail(img){
+        img.src="img/mail.png";
+    }
+    function changephone(img){
+        img.src="img/phone.png";
+    }
+</script>
+</body>
+</html>

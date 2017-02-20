@@ -1,0 +1,396 @@
+/**
+
+ * Reset
+
+ */
+
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; overflow: hidden;} 
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, code, form, fieldset, legend, button, input, select, textarea, th, td {margin: 0; padding: 0;}
+
+body, button, input, select, textarea {font: 12px/1.5 "Microsoft YaHei";} /* 雅黑："Microsoft YaHei" 或 \5FAE\8F6F\96C5\9ED1  */
+
+button, input, select, textarea {font-size: 100%;}
+
+ul, ol {list-style: none;} 
+
+
+
+/**
+
+ * Remove the gray background color from active links in IE 10.
+
+ */
+
+a {background: transparent; text-decoration: none;}
+
+a:hover {text-decoration: underline;}
+
+
+
+/**
+
+ * Improve readability when focused and also mouse hovered in all browsers.
+
+ */
+
+a:active, a:hover {outline: 0;}
+
+
+
+img, fieldset, legend, abbr, button {border: none 0;}
+
+img {vertical-align: middle; *-ms-interpolation-mode: bicubic; *interpolation-mode: bicubic;}
+
+
+
+/**
+
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+
+ */
+
+abbr[title] {cursor: help; border-bottom: 1px dotted;}
+
+
+
+small {font-size: 80%;}
+
+sup {vertical-align: text-top;}
+
+sub {vertical-align: text-bottom;}
+
+em, i {font-style: normal;}
+
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {display: block;} 
+
+audio, canvas, progress, video {display: inline-block; vertical-align: baseline;} 
+
+time, mark {display: inline;}
+
+mark {background: #ff0; color: #000;}
+
+
+
+/**
+
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+
+ */
+
+button {overflow: visible;}
+
+
+
+button,
+
+select {text-transform: none;}
+
+
+
+/**
+
+ * Address `[hidden]` styling not present in IE 8/9.
+
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+
+ */
+
+[hidden],
+
+template {display: none;}
+
+
+
+/**
+
+ * Re-set default cursor for disabled elements.
+
+ */
+
+button[disabled],
+
+html input[disabled] {cursor: default;}
+
+
+
+/**
+
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+
+ * 2. Remove excess padding in IE 8/9/10.
+
+ */
+
+input[type="checkbox"],
+
+input[type="radio"] {
+
+  box-sizing: border-box;  /* 1 */
+
+  padding: 0;  /* 2 */
+
+  vertical-align: middle;
+
+}
+
+
+
+/**
+
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+
+ * Safari (but not Chrome) clips the cancel button when the search input has
+
+ * padding (and `textfield` appearance).
+
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+
+input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
+
+
+
+table {border-collapse: collapse; border-spacing: 0;}
+
+
+
+/**
+
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+
+ */
+
+textarea {overflow: auto;}
+
+
+
+
+
+/**
+
+ * 业务代码
+
+ */
+
+html, body {height: 100%; width: 100%; min-width: 1200px;}
+
+body {position: relative; background-color: #b7def3;}
+
+a {color: #fff;}
+
+
+
+.g-tit{background: url(./img/sprite.png) no-repeat; z-index: 1000;}
+
+
+
+#nav{ width: 685px; height: 50px; position: absolute; top: 70px; left: 0; right: 0; margin: auto; z-index: 100; }
+
+#nav a{ display: block; position: absolute; left: 10px; top: 0; height: 28px; width: 100px; background-image: url(img/nav.png); text-align: center; line-height: 28px; -webkit-background-size: 100% auto; background-repeat: no-repeat;
+
+background-size: 100% auto;}
+
+#nav a:hover , #nav a.hover{ background-image: url(img/nav_hover.png);}
+
+a:hover{ text-decoration: none;}
+
+#nav .nav1{ left: 10px;}
+
+#nav .nav2{ left: 120px;}
+
+#nav .nav3{ left: 460px;}
+
+#nav .nav4{ left: 570px;}
+
+
+
+#video{ width:403px; height:227px; position: absolute; top: 37px; left: 146px;}
+
+video{ width: 100%; height: auto;}
+
+#control{ position: absolute; top:260px; height: 44px; width:403px; left: 146px;}
+
+#control div{ position: absolute; width: 50%; height: 44px;}
+
+#control img{ height: 100%;width: auto; margin-left:-60px ;}
+
+#control #v1{ right: 0; background-color: #00a0e9;}
+
+#control #v2{ background-color: #ed7389}
+
+
+
+.g-tit {position: absolute; z-index: 101; left: 50%; top: 20px; margin-left: -100px; width: 200px; height: 115px; background-position: 0 0; text-indent: -200%; white-space: nowrap; overflow: hidden; -webkit-background-size: 100% auto;
+
+background-size: 100% auto;}
+
+
+
+.g-container {position: relative; width: 100%; height: 100%; overflow: hidden;}
+
+.slider-cont {width: 1000%; height: 100%; overflow: hidden; zoom: 1;}
+
+.slider-cont:before,
+
+.slider-cont:after {display: table; content: ""; line-height: 0;}
+
+.slider-cont:after {clear: both;}
+
+.slider-cont li {float: left; width: 20%; height: 100%; position: relative; background-repeat: no-repeat; }
+
+
+
+.slider-cont li img{ position: absolute; width: 100%; height: auto; }
+
+
+
+#i1_p{ bottom: -200px; left: 50%; margin-left:-500px; width: 500px; transition: bottom 1s; -webkit-transition: bottom 1s;}
+
+.active #i1_p{ bottom: 0; }
+
+#i1_t{ bottom: 380px;left: 50%; width: 400px;}
+
+
+
+#i2_c{ bottom: 0px; left: 50%; margin-left: -420px; width: 360px; transition: bottom 1s; -webkit-transition: bottom 1s;}
+
+.active #i2_c{ bottom: 140px; }
+
+#i2_t{ bottom: 150px; left: 50%; width:320px;}
+
+
+
+#i3_p{ position: absolute; bottom: -100px; left: 50%; width:700px; height:477px; background-image: url(img/i3/ipad.png); -webkit-background-size: 100% 100%;
+
+background-size: 100% 100%; margin-left: -300px; transition: bottom 1s; -webkit-transition: bottom 1s;}
+
+.active #i3_p{ bottom: 30px; }
+
+
+
+#i4_p{ bottom: -100px; left: 50%; margin-left: 50px; width: 400px;transition: bottom 1s; -webkit-transition: bottom 1s;}
+
+.active #i4_p{ bottom: 0px;}
+
+#i4_t{ bottom: 100px; margin-left:-280px; left: 50%; width: 300px;}
+
+
+
+#i5_p{ bottom: -100px; left: 50%; position: absolute; background-image: url(./img/i2/book.png); -webkit-background-size: 100% 100% ;
+
+background-size: 100% 100% ; width: 660px; height: 606px; margin-left: -320px;transition: bottom 1s; -webkit-transition: bottom 1s;}
+
+.active #i5_p{ bottom: 30px;}
+
+
+
+#nav i {width: 30px; height: 30px; overflow: hidden; cursor: pointer;}
+
+#nav .prev { position: absolute; top: 0; left: -50px; background-image: url(img/prev.png); -webkit-background-size: 100% 100%;
+
+background-size: 100% 100%; }
+
+#nav .next { position: absolute; top: 0; right: -50px; background-image: url(img/next.png); -webkit-background-size: 100% 100%;
+
+background-size: 100% 100%; }
+
+
+
+.g-container li{ -webkit-background-size: 100% 100%;
+
+background-size: 100% 100%;}
+.g-container .infopic li{ -webkit-background-size: 100% 100%;
+
+    background-size: 100% 100%;}
+
+.g-container .i-0 {background-image: url(./img/bg.jpg);}
+
+.g-container .i-1 {background-image: url(./img/bg1.jpg);}
+
+.g-container .i-2 {background-image: url(./img/bg2.jpg);}
+
+.g-container .i-3 {background-image: url(./img/bg3.jpg);}
+
+.g-container .i-4 {background-image: url(./img/bg4.jpg);}
+
+.hide{display: none;}
+
+#books{
+
+	height: 383px;
+
+	width: 600px;
+	top:190px;
+	left:29px;
+	position: absolute;
+
+}
+
+#books .book, #books .book img{padding: 5% 0; width: 590px; height: 253px; position: absolute;}
+
+#b_prev,#b_next{ background-color: #ed7389; border-radius: 50%; position: absolute; top: 0; bottom: 0; margin: auto; height: 30px; width: 30px;cursor: pointer;}
+
+#b_prev{left: -30px;}
+
+#b_next{right: -30px;}
+
+
+
+.g-ft {position: absolute; left: 0; bottom: 0; width: 100%; height: 53px; font-size: 12px; min-width: 1200px; background: #00a0e9;}
+
+.g-ft-w {height: 100%; width: 1200px; margin: 0 auto; zoom: 1;}
+
+.g-ft-w:before,
+
+.g-ft-w:after {display: table; content: ""; line-height: 0;}
+
+.g-ft-w:after {clear: both;}
+
+
+
+.g-ft-l {float: left;}
+
+.g-ft-r {float: right;}
+
+
+
+.ft-slogan {display: inline-block; width: 183px; height: 40px; margin-top: 5px; overflow: hidden; text-indent: -200%; white-space: nowrap; -webkit-background-size: 100% auto; background-repeat: no-repeat;
+
+background-size: 100% auto; background-image: url(./img/slogan.png);}
+
+.ft-nav {margin-top: 10px; color: #fff; overflow: hidden; zoom: 1; vertical-align: middle; margin-right: -12px;}
+
+.ft-nav a,
+
+.ft-nav span {float: left; border-left: 1px solid #fff; margin-left: -1px; padding: 0 12px; line-height: 1.1;}
+
+.ft-copyright {text-align: right; color: #fff; margin-top: 10px;}
+
+.img1 li img{
+    width: auto;
+    height: 200px;
+    display: none;
+
+}
+.img2 li img{
+    width: auto;
+    height: 200px;
+    display: none;
+
+}
+.img3 li img{
+    width: auto;
+    height: 200px;
+    display: none;
+
+}
+.img4 li img{
+    width: auto;
+    height: 200px;
+    display: none;
+
+}
